@@ -75,7 +75,7 @@ p{
     right: 0;
     width: 100%;
     padding-bottom: 0;
-    z-index: 5;
+    z-index: 1;
     border-bottom: 0.1rem solid var(--white-color);
 }
 
@@ -162,13 +162,13 @@ p{
 }
 
 .eu-contente{
-    max-width: 65rem;
+    max-width: 100%;
     display: flex;
     flex-flow: column ;
     justify-content: center;
     min-height: 100vh;
     text-align: center;
-    margin: 0 auto;
+    
 }
 
 .projeto-content{
@@ -223,4 +223,68 @@ p{
     height: auto;
     display: block;
     margin: 50px auto;
+}
+
+.close-menu{
+display: none;
+}
+
+@media (max-width:800px){
+    .linkedin-content, .projetos, .video-projeto{
+        grid-template-columns: 1fr;
+    }
+    h2{
+        font-size: 3rem; /* Ajuste o tamanho conforme necessário */
+        line-height: 2.5rem; /* Ajuste a altura da linha para evitar sobreposição */
+        word-break: break-word; /* Permite que o texto quebre automaticamente, se necessário */
+    }
+    
+.menu{
+    bottom: 0;
+    text-align: center;
+}
+
+.menu-content,.menu-content ul{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-content{
+    height: 100vh;
+}
+
+.menu{
+    display: none;
+}
+
+
+
+.close-menu-label::after{
+    content: '☰';
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    color: var(--primary-color);
+    font-size: 2rem;
+    line-height: 2rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+/*×*/
+.close-menu:checked~.menu{
+    display: block;
+}
+
+.close-menu:checked~.close-menu-label::after{
+    content: '×';
+}
+.projetos p{
+    text-align: center;
+    margin-right: 3rem;
+  }
 }

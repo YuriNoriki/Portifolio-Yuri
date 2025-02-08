@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="main-bg">
+
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
    <aside class="menu white-bg">
     <div class="main-content menu-content">
     <h1>
         <a href="#">Yuri Noriki</a>
     </h1>
         <nav>
-            <ul>
+            <ul onclick="getElementById('close-menu').checked =false;">
                 <li><a href="#linkedin">Linkedin</a></li>
                 <li><a href="#eu">Quem sou eu?</a></li>
                 <li><a href="#projeto">Projetos</a></li>
