@@ -1,0 +1,16 @@
+# Força o Git a tratar tudo como texto e normalizar para LF no repositório
+* text=auto
+
+# Garante que arquivos do tipo shell/bash/Unix fiquem com LF
+*.sh text eol=lf
+
+# CSS, JS, HTML, JSON, YAML, etc.
+*.css  text eol=lf
+*.js   text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Arquivos Windows que podem ter CRLF
+*.bat  text eol=crlf
